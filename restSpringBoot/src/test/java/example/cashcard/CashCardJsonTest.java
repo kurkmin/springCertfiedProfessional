@@ -16,6 +16,7 @@ class CashCardJsonTest {
     @Autowired
     private JacksonTester<CashCard> json;
 
+//  Json test
     @Test
     void cashCardSerializationTest() throws IOException {
         CashCard cashCard = new CashCard(99L, 123.45);
