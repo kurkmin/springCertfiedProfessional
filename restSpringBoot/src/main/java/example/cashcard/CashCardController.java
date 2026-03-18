@@ -21,6 +21,7 @@ class CashCardController {
         this.cashCardRepository = cashCardRepository; 
     }
 
+    // Get request
     @GetMapping("/{requestedId}")
     private ResponseEntity<CashCard> findById(@PathVariable Long requestedId) {
         Optional<CashCard> cashCardOptional = cashCardRepository.findById(requestedId);
@@ -38,6 +39,7 @@ class CashCardController {
         // }
     }
 
+//  Post request
     @PostMapping
     private ResponseEntity<Void> createCashCard(@RequestBody CashCard newCashCardRequest, UriComponentsBuilder ucb) {
         CashCard savedCashCard = cashCardRepository.save(newCashCardRequest);

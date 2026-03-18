@@ -17,6 +17,7 @@ class CashCardApplicationTests {
 	@Autowired
 	TestRestTemplate restTemplate;
 
+	// Json test
 	@Test
 	void shouldReturnACashCardWhenDataIsSaved() {
 		ResponseEntity<String> response = restTemplate.getForEntity("/cashcards/99", String.class);
@@ -30,6 +31,7 @@ class CashCardApplicationTests {
 		assertThat(amount).isEqualTo(123.45);
 	}
 
+	// Get test
 	@Test
 	void shouldNotReturnACashCardWithAnUnknownId() {
 		ResponseEntity<String> response = restTemplate.getForEntity("/cashcards/1000", String.class);
@@ -38,6 +40,7 @@ class CashCardApplicationTests {
 		assertThat(response.getBody()).isBlank();
 	}
 
+	// Post test
 	@Test
     void shouldCreateANewCashCard() {
         CashCard newCashCard = new CashCard(null, 250.00);
