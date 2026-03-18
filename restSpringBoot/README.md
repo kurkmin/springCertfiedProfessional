@@ -1,0 +1,1 @@
+Spring Certified Professional course consists of "Building a REST API with Spring Boot", "Introduction to the Spring Professional Learning Path", "Spring Framework Essentials" and "Spring Boot" modules
